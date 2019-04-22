@@ -1,0 +1,18 @@
+body {
+  font-size: 100%;
+}
+.resume {
+  margin: 0 10%;
+}
+
+.resume__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+.resume__skills-experience__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 2rem;
+}

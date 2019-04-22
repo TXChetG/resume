@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chet Gassett | Web Developer, Content Writer, Coffee Nerd</title>
+    <link rel="stylesheet" href="resume.css" />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
@@ -13,151 +14,273 @@
     ></script>
   </head>
   <body>
-    <header>
-      <img
-        src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-        alt="placeholder for Chet"
-      />
-      <div class="biography">
-        <h1>Chet Gassett</h1>
-        <h2>Web Developer // Content Specialist // Coffee Nerd</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          perferendis et maxime quis quae libero qui ea vitae voluptatem
-          quibusdam dolorum ex beatae earum, ad quidem veniam rerum distinctio
-          sint?
-        </p>
-        <button>Download Resume as PDF</button>
+    <main class="resume">
+      <header class="resume__header">
+        <img
+          src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+          alt="placeholder for Chet"
+        />
+        <div class="biography">
+          <h1 class="biography__name">Chet Gassett</h1>
+          <h2 class="biography__title">
+            Web Developer // Content Specialist // Coffee Nerd
+          </h2>
+          <p class="biography__text">
+            At the heart of it all, I am a web developer. I use various
+            languages to build websites, and I focus on building strong
+            relationships between marketing and IT, and IT and users.
+          </p>
+          <p class="biography__text">
+            Drupal has been the primary CMS for all of Doane University’s web
+            based needs. Uniquely, my position was designed to primarily support
+            the Web Development vision of Doane's marketing office. Because of
+            this position, I’ve become adept at quickly developing products
+            which meet the needs of many user bases at any given time,
+            particularly through developing new PHP features, custom Drupal
+            Module development, writing HTML and CSS (SASS), and utilizing
+            JavaScript (Vanilla & jQuery) for requested DOM manipulation and
+            AJAX requests.
+          </p>
+          <p class="biography__text">
+            I also work from a person-centered perspective where my
+            relationships with my colleagues and clients are very important to
+            me. This is most easily showcased in my one-on-one training sessions
+            with web authors and editors, and in mentoring work-study Computer
+            Science students. I've devoted a lot of my time to being better at
+            teaching people ways to feel empowered as they learn how to edit and
+            build information into the website.
+          </p>
+          <button>Download Resume as PDF</button>
+        </div>
+      </header>
+      <div class="resume__skills-experience__container">
+        <section class="resume__skills">
+          <h2>Skills</h2>
+          <article class="skills__set">
+            <h3 class="skills__title">Content Management Systems</h3>
+            <ul class="skills__list">
+              <li class="skills__skill">Wordpress</li>
+              <li class="skills__skill">Drupal</li>
+            </ul>
+          </article>
+          <article class="skills__set">
+            <h3 class="skills__title">Web Development Languages</h3>
+            <ul class="skills__list">
+              <li class="skills__skill">HTML5</li>
+              <li class="skills__skill">CSS3</li>
+              <li class="skills_skill">JavaScript</li>
+              <li class="skills_skill">PHP</li>
+            </ul>
+          </article>
+          <article class="skills__set">
+            <h3 class="skills__title">
+              Web Development Frameworks &amp; Tools
+            </h3>
+            <ul class="skills__list">
+              <li class="skills_skill">Git</li>
+              <li class="skills_skill">SASS</li>
+              <li class="skills__skill">Foundation</li>
+              <li class="skills__skill">Bootstrap</li>
+              <li class="skills__skill">Node.js</li>
+              <li class="skills_skill">Gulp</li>
+              <li class="skills_skill">Grunt</li>
+            </ul>
+          </article>
+          <article class="skills__set">
+            <h3 class="skills__title">Software &amp; Related Tools</h3>
+            <ul class="skills__list">
+              <li class="skills__skill">
+                Adobe Creative Cloud
+                <ul>
+                  <li>Photoshop</li>
+                  <li>Illustrator</li>
+                  <li>InDesign</li>
+                  <li>Premiere</li>
+                </ul>
+              </li>
+              <li class="skills__skill">Figma</li>
+              <li class="skills__skill">Sketch</li>
+              <li class="skills__skill">Docker</li>
+              <li class="skills__skill">Google Analytics</li>
+              <li class="skills__skill">Google Tag Manager</li>
+              <li class="skills__skill">
+                Email Marketing
+                <ul>
+                  <li>MailChimp</li>
+                  <li>Active Campaign</li>
+                  <li>Fire Engine Red</li>
+                </ul>
+              </li>
+              <li class="skills__skill">Ellucian Recruit CRM - API</li>
+              <li class="skills__skill">
+                Cloud Based Development
+                <ul>
+                  <li>AWS EC2</li>
+                  <li>Heroku</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="skills__set">
+            <h3 class="skills__title">Web Development Standards</h3>
+            <p class="skills__skill--text">
+              Familiarity and understanding of WCAG 2.0 AA requirements relating
+              to Section 508 for Web Accessibility Standards.
+            </p>
+            <p class="skills_skill--text">
+              Ability to design and optimize web pages across platforms,
+              including mobile browsers.
+            </p>
+          </article>
+        </section>
+        <section class="resume__experience">
+          <h2>Professional Experience</h2>
+          <article class="job">
+            <h3 class="job__title">Web Developer &amp; Content Specialist</h3>
+            <p class="job__employer">
+              Doane Univeristy &mdash; Crete, NE &amp; Remote
+            </p>
+            <p class="job__dates">August 2013 - Present</p>
+            <p class="job__brief">
+              Housed in IT, but works closely with marketing office to develop
+              Web features showcasing Doane University to prospective on-ground
+              and online students.
+            </p>
+            <h4 class="job__requirements__title">Day to Day</h4>
+            <ul class="job__requirements">
+              <li>
+                Develop new features for the
+                <a href="https://doane.edu">doane.edu</a> website using Drupal
+                7, PHP, HTML, CSS, JavaScript (Vanilla &amp; jQuery), and MySQL
+              </li>
+              <li>Thorough knowledge of WCAG standards</li>
+              <li>
+                Develop JavaScript for communcating between Web forms and
+                Ellucian Recruit CRM, including PHP &amp; MySQL based back-up
+                system
+              </li>
+              <li>
+                Maintain current and legacy code bases written using PHP, HTML,
+                and CSS
+              </li>
+              <li>
+                Develop custom Drupal modules as needed to prevent new features
+                from interfering with base theme
+              </li>
+              <li>Extensive problem solving for Drupal related needs</li>
+              <li>HTML Email Design and Development</li>
+              <li>
+                Manage implementation of Google Tag Manager across doane.edu
+              </li>
+              <li>Create and deliver reports from Google Analytics</li>
+            </ul>
+            <h4 class="job__requirements__title">Management</h4>
+            <ul class="job__requirements">
+              <li>
+                Supervisor for Web interns, typically 1 per academic year, in IT
+                for the past 3 years
+              </li>
+              <li>
+                Lead training of all new Web authors and Web editors to meet
+                website standards. 30 active authors &amp; editors per year
+              </li>
+            </ul>
+          </article>
+          <article class="job">
+            <h3 class="job__title">Web Developer Assistant</h3>
+            <p class="job__employer">
+              Fort Wester Stores | eCommerce Department &mdash; Lincoln, NE
+            </p>
+            <p class="job__dates">March 2011 - August 2013</p>
+            <p class="job__brief">
+              Web development focused on eCommerce needs including SEO, HTML
+              Email development, and daily writing of HTML, CSS, and PHP.
+            </p>
+            <ul class="job__requirements">
+              <li>
+                Develop new features and maintain
+                <a href="https://fortwestern.com">fortwestern.com</a>
+              </li>
+              <li>Optimize website for mobile browsing</li>
+              <li>
+                Actively create social media content reflecting new events and
+                deals for customers
+              </li>
+              <li>Develop and implement SEO strategies</li>
+            </ul>
+          </article>
+          <article class="job">
+            <h3 class="job__title">Bookseller &amp; Marketing Coordinator</h3>
+            <p class="job__employer">
+              Indigo Bridge Books &amp; Cafe &mdash; Lincoln, NE
+            </p>
+            <p class="job__dates">April 2010 - July 2011</p>
+            <p class="job__brief">
+              Hired primarily as a bookseller, but quickly moved into developing
+              marketing plans and the website to attract more customers.
+            </p>
+            <ul class="job__requirements">
+              <li>
+                Edited and managed the Indigo Bridge website and blog using a
+                CMS
+              </li>
+              <li>
+                Designed and developed marketing campaigns based on my formal
+                public relations education for monthly events such as the First
+                Friday Art Walk
+              </li>
+              <li>
+                Utilized print media to market various events, such as Banned
+                Books Week
+              </li>
+              <li>
+                Maintained stock levels for assigned sections using Booklog POS
+                Software
+              </li>
+              <li>
+                Researched new and upcoming releases to make informed stock
+                decisions
+              </li>
+            </ul>
+          </article>
+        </section>
       </div>
-    </header>
-    <section class="projects">
-      <h2>Projects</h2>
-    </section>
-    <section class="resume">
-      <h2>Professional Experience</h2>
-      <article class="job">
-        <h3 class="job__title">Web Developer &amp; Content Specialist</h3>
-        <p class="job__employer">
-          Doane Univeristy &mdash; Crete, NE &amp; Remote
-        </p>
-        <p class="job__dates">August 2013 - Present</p>
-        <p class="job__brief">
-          Housed in IT, but works closely with marketing office to develop Web
-          features showcasing Doane University to prospective on-ground and
-          online students.
-        </p>
-        <h4 class="job__requirements__title">Day to Day</h4>
-        <ul class="job__requirements">
+      <section class="resume__projects">
+        <h2>Projects</h2>
+      </section>
+      <section class="resume__education">
+        <h2>Education</h2>
+        <article class="education__degree">
+          <h3 class="education__degree__title">
+            Bachelor of Arts in Mass Communications with Public Relations
+            emphasis
+          </h3>
+          <p class="education__degree__honor">Magna Cum Laude</p>
+          <p class="education__degree__institution">
+            Sam Houston State University &mdash; Huntsville, TX
+          </p>
+          <p class="education__degree__date">2009</p>
+        </article>
+      </section>
+      <footer class="resume__links">
+        <ul>
           <li>
-            Develop new features for the
-            <a href="https://doane.edu">doane.edu</a> website using Drupal 7,
-            PHP, HTML, CSS, JavaScript (Vanilla &amp; jQuery), and MySQL
-          </li>
-          <li>Thorough knowledge of WCAG standards</li>
-          <li>
-            Develop JavaScript for communcating between Web forms and Ellucian
-            Recruit CRM, including PHP &amp; MySQL based back-up system
+            <a href="https://github.com/TXChetG"
+              ><span class="fab fa-github fa-3x"></span
+            ></a>
           </li>
           <li>
-            Maintain current and legacy code bases written using PHP, HTML, and
-            CSS
+            <a href="https://codepen.io/TXChetG/"
+              ><span class="fab fa-codepen fa-3x"></span
+            ></a>
           </li>
           <li>
-            Develop custom Drupal modules as needed to prevent new features from
-            interfering with base theme
-          </li>
-          <li>Extensive problem solving for Drupal related needs</li>
-          <li>HTML Email Design and Development</li>
-          <li>Manage implementation of Google Tag Manager across doane.edu</li>
-          <li>Create and deliver reports from Google Analytics</li>
-        </ul>
-        <h4 class="job__requirements__title">Management</h4>
-        <ul class="job__requirements">
-          <li>
-            Supervisor for Web interns, typically 1 per academic year, in IT for
-            the past 3 years
-          </li>
-          <li>
-            Lead training of all new Web authors and Web editors to meet website
-            standards. 30 active authors &amp; editors per year
+            <a href="https://www.linkedin.com/in/chetgassett/"
+              ><span class="fab fa-linkedin fa-3x"></span
+            ></a>
           </li>
         </ul>
-      </article>
-      <article class="job">
-        <h3 class="job__title">Web Developer Assistant</h3>
-        <p class="job__employer">
-          Fort Wester Stores | eCommerce Department &mdash; Lincoln, NE
-        </p>
-        <p class="job__dates">March 2011 - August 2013</p>
-        <p class="job__brief">
-          Web development focused on eCommerce needs including SEO, HTML Email
-          development, and daily writing of HTML, CSS, and PHP.
-        </p>
-        <ul class="job__requirements">
-          <li>
-            Develop new features and maintain
-            <a href="https://fortwestern.com">fortwestern.com</a>
-          </li>
-          <li>Optimize website for mobile browsing</li>
-          <li>
-            Actively create social media content reflecting new events and deals
-            for customers
-          </li>
-          <li>Develop and implement SEO strategies</li>
-        </ul>
-      </article>
-      <article class="job">
-        <h3 class="job__title">Bookseller &amp; Marketing Coordinator</h3>
-        <p class="job__employer">
-          Indigo Bridge Books &amp; Cafe &mdash; Lincoln, NE
-        </p>
-        <p class="job__dates">April 2010 - July 2011</p>
-        <p class="job__brief">
-          Hired primarily as a bookseller, but quickly moved into developing
-          marketing plans and the website to attract more customers.
-        </p>
-        <ul class="job__requirements">
-          <li>
-            Edited and managed the Indigo Bridge website and blog using a CMS
-          </li>
-          <li>
-            Designed and developed marketing campaigns based on my formal public
-            relations education for monthly events such as the First Friday Art
-            Walk
-          </li>
-          <li>
-            Utilized print media to market various events, such as Banned Books
-            Week
-          </li>
-          <li>
-            Maintained stock levels for assigned sections using Booklog POS
-            Software
-          </li>
-          <li>
-            Researched new and upcoming releases to make informed stock
-            decisions
-          </li>
-        </ul>
-      </article>
-    </section>
-    <footer>
-      <ul>
-        <li>
-          <a href="https://github.com/TXChetG"
-            ><span class="fab fa-github fa-3x"></span
-          ></a>
-        </li>
-        <li>
-          <a href="https://codepen.io/TXChetG/"
-            ><span class="fab fa-codepen fa-3x"></span
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/chetgassett/"
-            ><span class="fab fa-linkedin fa-3x"></span
-          ></a>
-        </li>
-      </ul>
-    </footer>
+      </footer>
+    </main>
   </body>
 </html>
