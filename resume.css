@@ -104,13 +104,13 @@ section,
   background-size: 100% 0.3rem;
   background-position: 0 88%;
   transition: background-size 0.25s ease-in, font-weight 0.25s ease-in;
-  font-size: 1.02em;
+  font-size: 1em;
 }
 
 .highlight:hover {
   background-size: 100% 90%;
   font-weight: 600;
-  padding: 0.2rem;
+  padding: 0.2rem 0;
 }
 
 /* Resume Sections - Header
