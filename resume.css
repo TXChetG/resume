@@ -69,12 +69,12 @@ ul {
   list-style-type: ">  ";
 }
 
-ul>li {
+ul > li {
   margin: 0.5rem 0;
 }
 
 section,
-.biography__extended.expanded>.biography__text:last-of-type {
+.biography__extended.expanded > .biography__text:last-of-type {
   border-bottom: 1px solid #003677;
   padding-bottom: 1.5rem;
   margin-bottom: 2rem;
@@ -164,10 +164,10 @@ section,
   width: 100%;
   padding: 1rem;
   position: absolute;
-  top: -.5rem;
-  left: -.5rem;
+  top: -0.5rem;
+  left: -0.5rem;
   z-index: -1;
-  transition: z-index .3s step-end;
+  transition: z-index 0.3s step-end;
 }
 
 .button__biography__expand:hover::before {
@@ -185,8 +185,7 @@ section,
   position: absolute;
   bottom: -0.5rem;
   right: -0.5rem;
-  transition: bottom 0.25s, color 0.25s, right 0.25s, width 0.25s, height 0.25s,
-    z-index 0.25s;
+  transition: bottom 0.25s, color 0.25s, right 0.25s, width 0.25s, height 0.25s, z-index 0.25s;
   transition-timing-function: ease-in;
   z-index: -1;
 }
@@ -225,8 +224,7 @@ section,
   display: inline-block;
   margin-bottom: 0;
   line-height: 1.4;
-  text-shadow: 2px 2px #f3f1f3, 2px -2px #f3f1f3, -2px 2px #f3f1f3,
-    -2px -2px #f3f1f3;
+  text-shadow: 2px 2px #f3f1f3, 2px -2px #f3f1f3, -2px 2px #f3f1f3, -2px -2px #f3f1f3;
 }
 
 .job__employer,
@@ -243,7 +241,7 @@ section,
   grid-template-columns: 2fr 1.5fr;
   grid-column-gap: 5rem;
   margin-bottom: 4rem;
-  box-shadow: 0px 15px 13px -9px #9A9EA5;
+  box-shadow: 0px 15px 13px -9px #9a9ea5;
   padding: 0 1rem;
 }
 
@@ -251,7 +249,7 @@ section,
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -260,9 +258,9 @@ section,
 }
 
 .project__tech::before {
-  content: '';
-  padding: 0 .5rem;
-  margin-right: .25rem;
+  content: "";
+  padding: 0 0.5rem;
+  margin-right: 0.25rem;
   width: 2rem;
   height: 2rem;
   display: inline-block;
@@ -272,28 +270,28 @@ section,
 }
 
 .project__tech.html::before {
-  background-image: url('assets/icons/html5-original.svg');
+  background-image: url("assets/icons/html5-original.svg");
 }
 .project__tech.css::before {
-  background-image: url('assets/icons/css3-original.svg');
+  background-image: url("assets/icons/css3-original.svg");
 }
 .project__tech.foundation::before {
-  background-image: url('assets/icons/foundation-original.svg');
+  background-image: url("assets/icons/foundation-original.svg");
 }
 .project__tech.javascript::before {
-  background-image: url('assets/icons/javascript-original.svg');
+  background-image: url("assets/icons/javascript-original.svg");
 }
 .project__tech.nodejs::before {
-  background-image: url('assets/icons/nodejs-original.svg');
+  background-image: url("assets/icons/nodejs-original.svg");
 }
 .project__tech.aws::before {
-  background-image: url('assets/icons/amazonwebservices-original.svg');
+  background-image: url("assets/icons/amazonwebservices-original.svg");
 }
 .project__tech.php::before {
-  background-image: url('assets/icons/php-original.svg');
+  background-image: url("assets/icons/php-original.svg");
 }
 .project__tech.drupal::before {
-  background-image: url('assets/icons/drupal-original.svg');
+  background-image: url("assets/icons/drupal-original.svg");
 }
 
 .project__image {
@@ -361,7 +359,7 @@ section,
   }
 
   .job::after {
-    content: '+';
+    content: "+";
     color: #003677;
     display: flex;
     font-size: 2rem;
@@ -374,11 +372,11 @@ section,
     right: 1rem;
     bottom: -1rem;
     line-height: 0.5;
-    padding: .25rem;
+    padding: 0.25rem;
   }
 
   .job.open::after {
-    content: '-';
+    content: "-";
   }
 
   .job__details {
@@ -391,9 +389,8 @@ section,
 /* Media Queries - 900px+ 
 */
 @media screen and (min-width: 56.25rem) {
-
   section,
-  .biography__extended.expanded>.biography__text:last-of-type {
+  .biography__extended.expanded > .biography__text:last-of-type {
     margin-bottom: 2rem;
   }
 
@@ -434,6 +431,21 @@ section,
   }
 
   .job__title {
-    line-height: .99;
+    line-height: 0.99;
+  }
+}
+@media screen and (max-width: 81.24rem) and (min-width: 56.25rem) {
+  .projects__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .project:nth-child(2n + 1):last-of-type {
+    grid-column: 1 / span 2;
+  }
+}
+@media screen and (max-width: 81.24rem) {
+  .project {
+    grid-template-columns: 1fr;
   }
 }
