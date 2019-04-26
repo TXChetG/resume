@@ -1,18 +1,439 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,600|Frank+Ruhl+Libre:900");
+
+/* Light Color Pallette 
+- #F3F1F3
+- #003677
+- #367FA6
+- #8AB5AC
+- #EBA674
+*/
+
+/* Global Styles -
+*/
+html {
   font-size: 100%;
 }
+
+body {
+  background-color: #f3f1f3;
+  color: #211615;
+  font-size: 1.25rem;
+  font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #003677;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: "Frank Ruhl Libre", "Garamond", "Times", serif;
+  font-weight: 900;
+}
+
+a {
+  color: #003677;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link--arrow::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-size: 0.9rem;
+  font-weight: 900;
+  content: "\f35d";
+  margin-left: 0.35rem;
+  overflow: hidden;
+  transition: width 0.25s ease-in;
+  vertical-align: text-top;
+  width: 0;
+}
+
+.link--arrow:hover::after {
+  width: 1.2rem;
+}
+
+ul {
+  list-style-type: ">  ";
+}
+
+ul>li {
+  margin: 0.5rem 0;
+}
+
+section,
+.biography__extended.expanded>.biography__text:last-of-type {
+  border-bottom: 1px solid #003677;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
 .resume {
-  margin: 0 10%;
+  margin: 2rem 1rem 0;
 }
 
+/* Helper Styles - 
+*/
+
+@media screen and (max-width: 30rem) {
+  .mobile__break {
+    display: table;
+  }
+}
+
+.section__grid {
+  display: grid;
+  grid-template-rows: 4.5em 1fr;
+}
+
+.highlight {
+  background-image: linear-gradient(120deg, #8ab5ac 0%, #eba674 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in, font-weight 0.25s ease-in;
+  font-size: 1.02em;
+}
+
+.highlight:hover {
+  background-size: 100% 90%;
+  font-weight: 600;
+  padding: 0.2rem;
+}
+
+/* Resume Sections - Header
+*/
 .resume__header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.resume__skills-experience__container {
+.resume__header img {
+  width: 100%;
+  display: none;
+}
+
+.biography__name {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 4.5rem;
+  margin: 0;
+}
+
+.biography__title {
+  color: #211615;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0 0 4rem;
+}
+
+.biography__text--feature {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.button__biography__expand {
+  background-color: #003677;
+  border: 2px solid #003677;
+  color: #f3f1f3;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+
+.button__biography__expand::before {
+  box-sizing: border-box;
+  color: #211615;
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: -.5rem;
+  left: -.5rem;
+  z-index: -1;
+  transition: z-index .3s step-end;
+}
+
+.button__biography__expand:hover::before {
+  content: "Click to Expand";
+  z-index: 2;
+}
+
+.button__biography__expand::after {
+  background-color: #8ab5ac;
+  box-sizing: border-box;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  padding: 1rem;
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  transition: bottom 0.25s, color 0.25s, right 0.25s, width 0.25s, height 0.25s,
+    z-index 0.25s;
+  transition-timing-function: ease-in;
+  z-index: -1;
+}
+
+.button__biography__expand:hover::after {
+  width: 100%;
+  height: 100%;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+}
+
+.biography__extended {
+  grid-column: 1 / span 2;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.65s linear;
+}
+
+/* Resume Sections - Skills
+*/
+
+.skills__list {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+/* Resume Sections - Experience
+*/
+.job {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.job__title {
+  border-bottom: 3px solid currentColor;
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 1.4;
+  text-shadow: 2px 2px #f3f1f3, 2px -2px #f3f1f3, -2px 2px #f3f1f3,
+    -2px -2px #f3f1f3;
+}
+
+.job__employer,
+.job__dates {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+/* Resume Sections - Projects
+*/
+
+.project {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-column-gap: 2rem;
+  grid-template-columns: 2fr 1.5fr;
+  grid-column-gap: 5rem;
+  margin-bottom: 4rem;
+  box-shadow: 0px 15px 13px -9px #9A9EA5;
+  padding: 0 1rem;
+}
+
+.project__tech__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project__tech {
+  display: flex;
+}
+
+.project__tech::before {
+  content: '';
+  padding: 0 .5rem;
+  margin-right: .25rem;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project__tech.html::before {
+  background-image: url('assets/icons/html5-original.svg');
+}
+.project__tech.css::before {
+  background-image: url('assets/icons/css3-original.svg');
+}
+.project__tech.foundation::before {
+  background-image: url('assets/icons/foundation-original.svg');
+}
+.project__tech.javascript::before {
+  background-image: url('assets/icons/javascript-original.svg');
+}
+.project__tech.nodejs::before {
+  background-image: url('assets/icons/nodejs-original.svg');
+}
+.project__tech.aws::before {
+  background-image: url('assets/icons/amazonwebservices-original.svg');
+}
+.project__tech.php::before {
+  background-image: url('assets/icons/php-original.svg');
+}
+.project__tech.drupal::before {
+  background-image: url('assets/icons/drupal-original.svg');
+}
+
+.project__image {
+  justify-self: center;
+  align-self: center;
+}
+
+.project__image img {
+  width: 100%;
+}
+
+/* Resume Sections - Education
+*/
+
+.education__degree__title {
+  margin-bottom: 0;
+}
+
+.education__degree__subtitle {
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.education__degree__honor,
+.education__degree__institution,
+.education__degree__date {
+  margin: 0;
+}
+
+.education__degree__honor {
+  font-style: italic;
+}
+
+/* Resume Sections - Footer
+*/
+
+.resume__footer {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.resume__footer__links_list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  margin-top: 2rem;
+  padding-left: 0;
+}
+
+.resume__footer__list_link:nth-child(2n) {
+  margin: 0 4rem;
+}
+
+/* Media Queries - <900px
+*/
+
+@media screen and (max-width: 56.24rem) {
+  .job {
+    border: 2px solid #003677;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .job::after {
+    content: '+';
+    color: #003677;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #f3f1f3;
+    border: 2px solid #003677;
+    position: absolute;
+    right: 1rem;
+    bottom: -1rem;
+    line-height: 0.5;
+    padding: .25rem;
+  }
+
+  .job.open::after {
+    content: '-';
+  }
+
+  .job__details {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.25s ease-in;
+  }
+}
+
+/* Media Queries - 900px+ 
+*/
+@media screen and (min-width: 56.25rem) {
+
+  section,
+  .biography__extended.expanded>.biography__text:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  .mobile__break {
+    display: inline;
+  }
+
+  .resume {
+    font-size: 1.5rem;
+    margin: 3rem 10vw 0;
+  }
+
+  .section__grid {
+    display: grid;
+    grid-template-columns: 20vw 60vw;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  .resume__header img {
+    display: block;
+  }
+
+  .resume__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+  }
+
+  .biography__name {
+    font-size: 6rem;
+  }
+
+  .biography__title {
+    line-height: 1rem;
+    margin: 1rem 0 4rem;
+  }
+
+  .job__title {
+    line-height: .99;
+  }
 }

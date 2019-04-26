@@ -1,0 +1,93 @@
+Resume component bucket
+
+-- Skills
+
+          <article class="skills__set">
+            <ul class="skills__list">
+              <li class="skills__skill">Highly-skilled in creating HTML and CSS.</li>
+              <li class="skills__skill">Passionate about well-formed and efficient JavaScript.</li>
+              <li class="skills__skill">Thinks PHP is actually pretty cool.</li>
+              <li class="skills_skill">Loves task runners, package managers, version control, and bash &amp;&amp; PowerShell scripts.</li>
+              <li class="skills_skill">Knowledgeable on accessibility, user-experience, responsive web design, and Drupal.</li>
+            </ul>
+          </article>
+
+
+          
+          <article class="skills__set">
+            <h3 class="skills__title">Content Management Systems</h3>
+            <ul class="skills__list">
+              <li class="skills__skill">Wordpress</li>
+              <li class="skills__skill">Drupal</li>
+            </ul>
+          </article>
+          <article class="skills__set">
+            <h3 class="skills__title">Web Development Languages</h3>
+            <ul class="skills__list">
+              <li class="skills__skill">HTML5</li>
+              <li class="skills__skill">CSS3</li>
+              <li class="skills_skill">JavaScript</li>
+              <li class="skills_skill">PHP</li>
+            </ul>
+          </article>
+          <article class="skills__set">
+            <h3 class="skills__title">
+              Web Development Frameworks &amp; Tools
+            </h3>
+            <ul class="skills__list">
+              <li class="skills_skill">Git</li>
+              <li class="skills_skill">SASS</li>
+              <li class="skills__skill">Foundation</li>
+              <li class="skills__skill">Bootstrap</li>
+              <li class="skills__skill">Node.js</li>
+              <li class="skills_skill">Gulp</li>
+              <li class="skills_skill">Grunt</li>
+            </ul>
+          </article>
+
+
+          <article class="skills__set">
+            <h3 class="skills__title">Software &amp; Related Tools</h3>
+            <ul class="skills__list">
+              <li class="skills__skill">
+                Adobe Creative Cloud
+                <ul>
+                  <li>Photoshop</li>
+                  <li>Illustrator</li>
+                  <li>InDesign</li>
+                  <li>Premiere</li>
+                </ul>
+              </li>
+              <li class="skills__skill">Figma</li>
+              <li class="skills__skill">Sketch</li>
+              <li class="skills__skill">Docker</li>
+              <li class="skills__skill">Google Analytics</li>
+              <li class="skills__skill">Google Tag Manager</li>
+              <li class="skills__skill">
+                Email Marketing
+                <ul>
+                  <li>MailChimp</li>
+                  <li>Active Campaign</li>
+                  <li>Fire Engine Red</li>
+                </ul>
+              </li>
+              <li class="skills__skill">Ellucian Recruit CRM - API</li>
+              <li class="skills__skill">
+                Cloud Based Development
+                <ul>
+                  <li>AWS EC2</li>
+                  <li>Heroku</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          
+          <article class="skills__set skills__set--wide">
+            <h3 class="skills__title">Web Development Standards</h3>
+            <p class="skills__skill--text">
+              Familiarity and understanding of WCAG 2.0 AA requirements relating to Section 508 for Web Accessibility Standards.
+            </p>
+            <p class="skills_skill--text">
+              Ability to design and optimize web pages across platforms, including mobile browsers.
+            </p>
+          </article>
