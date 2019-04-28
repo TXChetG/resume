@@ -54,7 +54,6 @@ a {
   font-size: 0.9rem;
   font-weight: 900;
   content: "\f35d";
-  margin-left: 0.35rem;
   overflow: hidden;
   transition: width 0.25s ease-in;
   vertical-align: text-top;
@@ -62,6 +61,7 @@ a {
 }
 
 .link--arrow:hover::after {
+  margin-left: 0.35rem;
   width: 1.2rem;
 }
 
