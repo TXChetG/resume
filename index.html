@@ -230,7 +230,7 @@
             <div class="project__info">
               <h3 class="project__title">sRAT | Personal Project</h3>
               <p class="project__description">The Squad Readiness Assessment Test is <span class="highlight">SAAS</span> born from the need for a modern in-class quiz tool to replicate the scratch-off cards that have more traditionally been used in team-based learning environments. sRAT allows teams of students to collectively take quizzes added by their professor live during class.</p>
-              <p>The full sRAT Read Me file is available on <a class="link--arrow" href="https://github.com/TXChetG/sRAT">GitHub</a>.</p>
+              <p>Learn more about sRAT through the <a class="link--arrow" href="https://github.com/TXChetG/sRAT">GitHub</a> ReadMe file.</p>
               <h4>Technology Used:</h4>
               <ul class="project__tech__list">
                 <li class="project__tech html">HTML</li>
@@ -387,6 +387,9 @@
       });
 
       document.addEventListener("DOMContentLoaded", () => {
+        enableExpandingJobs(document.body.clientWidth);
+      });
+      window.addEventListener("resize", () => {
         enableExpandingJobs(document.body.clientWidth);
       });
     </script>

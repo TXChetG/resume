@@ -361,11 +361,13 @@ section,
     border: 2px solid #003677;
     margin-bottom: 2rem;
     position: relative;
+    cursor: pointer;
   }
 
   .job::after {
     content: "+";
     color: #003677;
+    cursor: pointer;
     display: flex;
     font-size: 2rem;
     justify-content: center;
@@ -378,6 +380,10 @@ section,
     bottom: -1rem;
     line-height: 0.5;
     padding: 0.25rem;
+  }
+
+  .job.open {
+    cursor: initial;
   }
 
   .job.open::after {
