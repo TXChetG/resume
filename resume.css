@@ -67,6 +67,7 @@ a {
 
 ul {
   list-style-type: ">  ";
+  margin-bottom: 0;
 }
 
 ul > li {
@@ -116,7 +117,7 @@ section,
 /* Resume Sections - Header
 */
 .resume__header {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .resume__header img {
@@ -173,6 +174,10 @@ section,
 .button__biography__expand:hover::before {
   content: "Click to Expand";
   z-index: 2;
+}
+
+.button__biography__expand.expanded:hover::before {
+  content: "Click to Close";
 }
 
 .button__biography__expand::after {
@@ -242,7 +247,7 @@ section,
   grid-column-gap: 5rem;
   margin-bottom: 4rem;
   box-shadow: 0px 15px 13px -9px #9a9ea5;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem;
 }
 
 .project__tech__list {
@@ -442,6 +447,7 @@ section,
   }
   .project:nth-child(2n + 1):last-of-type {
     grid-column: 1 / span 2;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (max-width: 81.24rem) {
