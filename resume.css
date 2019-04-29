@@ -17,7 +17,7 @@ html {
 body {
   background-color: #f3f1f3;
   color: #211615;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -70,12 +70,12 @@ ul {
   margin-bottom: 0;
 }
 
-ul > li {
+ul>li {
   margin: 0.5rem 0;
 }
 
 section,
-.biography__extended.expanded > .biography__text:last-of-type {
+.biography__extended.expanded>.biography__text:last-of-type {
   border-bottom: 1px solid #003677;
   padding-bottom: 1.5rem;
   margin-bottom: 2rem;
@@ -239,6 +239,22 @@ section,
   margin: 0.5rem 0 0;
 }
 
+.button__job__expand {
+  background: #003677;
+  border-radius: 0;
+  color: #f3f1f3;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: none;
+  bottom: 0;
+  margin: 0;
+  padding: .75rem 0;
+  font-size: 1.1rem;
+}
+
 /* Resume Sections - Projects
 */
 
@@ -278,24 +294,31 @@ section,
 .project__tech.html::before {
   background-image: url("assets/icons/html5-original.svg");
 }
+
 .project__tech.css::before {
   background-image: url("assets/icons/css3-original.svg");
 }
+
 .project__tech.foundation::before {
   background-image: url("assets/icons/foundation-original.svg");
 }
+
 .project__tech.javascript::before {
   background-image: url("assets/icons/javascript-original.svg");
 }
+
 .project__tech.nodejs::before {
   background-image: url("assets/icons/nodejs-original.svg");
 }
+
 .project__tech.aws::before {
   background-image: url("assets/icons/amazonwebservices-original.svg");
 }
+
 .project__tech.php::before {
   background-image: url("assets/icons/php-original.svg");
 }
+
 .project__tech.drupal::before {
   background-image: url("assets/icons/drupal-original.svg");
 }
@@ -361,11 +384,11 @@ section,
   .job {
     border: 2px solid #003677;
     margin-bottom: 2rem;
+    padding-bottom: 4.5rem;
     position: relative;
-    cursor: pointer;
   }
 
-  .job::after {
+  /*.job::after {
     content: "+";
     color: #003677;
     cursor: pointer;
@@ -381,28 +404,33 @@ section,
     bottom: -1rem;
     line-height: 0.5;
     padding: 0.25rem;
-  }
+  }*/
 
   .job.open {
     cursor: initial;
   }
 
-  .job.open::after {
+  /*.job.open::after {
     content: "-";
-  }
+  }*/
 
   .job__details {
     height: 0;
     overflow: hidden;
     transition: height 0.25s ease-in;
   }
+
+  .button__job__expand {
+    display: inline-block;
+  }
 }
 
 /* Media Queries - 900px+ 
 */
 @media screen and (min-width: 56.25rem) {
+
   section,
-  .biography__extended.expanded > .biography__text:last-of-type {
+  .biography__extended.expanded>.biography__text:last-of-type {
     margin-bottom: 2rem;
   }
 
@@ -446,17 +474,20 @@ section,
     line-height: 0.99;
   }
 }
+
 @media screen and (max-width: 81.24rem) and (min-width: 56.25rem) {
   .projects__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
   }
+
   .project:nth-child(2n + 1):last-of-type {
     grid-column: 1 / span 2;
     margin-bottom: 2rem;
   }
 }
+
 @media screen and (max-width: 81.24rem) {
   .project {
     grid-template-columns: 1fr;
