@@ -7,6 +7,12 @@
     <title>
       Chet Gassett | Web Developer, Content Writer, Coffee Nerd
     </title>
+    <meta property="og:title" content="Chet Gassett | Web Developer, Content Writer, Coffee Nerd" />   
+    <meta property="og:description" content="At the heart of it all, I am a web developer. I use various languages to build web products, and I focus on building strong relationships between marketing, IT, and users." /> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:url" content="https://www.chetgassett.com" />
+    <meta property="og:image" content="https://www.chetgassett.com/assets/images/chet_mural.jpg" />
+    <meta property="og:image:alt" content="Photo of Chet standing in front of a mural in San Angelo, TX." />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="resume.css" />
   </head>
@@ -386,7 +392,7 @@
         openMinimizedElement(bio_drawer);
       });
 
-      document.addEventListener("DOMContentLoaded", () => {
+      window.addEventListener("DOMContentLoaded", () => {
         enableExpandingJobs(document.body.clientWidth);
       });
       window.addEventListener("resize", () => {
