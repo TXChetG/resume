@@ -123,6 +123,7 @@ section,
 .resume__header img {
   width: 100%;
   display: none;
+  border-radius: 3px;
 }
 
 .biography__name {
